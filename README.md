@@ -23,3 +23,10 @@ This backend will support various functionalities required to mimic the core fea
 6.**Redis:** Used for caching and session management.  
 7.**Docker:** Containerization tool for consistent development and deployment environments.  
 8.**CI/CD Pipelines:** Automated pipelines for testing and deploying code changes.  
+
+
+## Team Roles:
+1.**Backend Developer:** Responsible for implementing API endpoints, database schemas, and business logic.  
+2.**Database Administrator:** Manages database design, indexing, and optimizations.  
+3.**DevOps Engineer:** Handles deployment, monitoring, and scaling of the backend services.  
+4.**QA Engineer:** Ensures the backend functionalities are thoroughly tested and meet quality standards.  
