@@ -181,6 +181,6 @@ CI/CD (Continuous Integration and Continuous Deployment) pipelines automate the 
 
 ### Tools Used:
 
-**GitHub Actions:** Automates testing and deployment workflows directly from the repository.
-**Docker:** Ensures consistent environments across development, testing, and production.
-**CI/CD Pipelines:** Integrate version control, testing, and deployment for smooth, scalable releases.
+**GitHub Actions:** Automates testing and deployment workflows directly from the repository.  
+**Docker:** Ensures consistent environments across development, testing, and production.  
+**CI/CD Pipelines:** Integrate version control, testing, and deployment for smooth, scalable releases.  
