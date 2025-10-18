@@ -40,3 +40,86 @@ This backend will support various functionalities required to mimic the core fea
 6.**Redis:** Used for caching and session management.  
 7.**Docker:** Containerization tool for consistent development and deployment environments.  
 8.**CI/CD Pipelines:** Automated pipelines for testing and deploying code changes.  
+
+## Database Design:
+
+## Users: 
+
+### Key Fields:
+**id:** Unique identifier for each user  
+**name:** Full name of the user  
+**email:** Unique email address used for authentication  
+**password:** Hashed password for secure login  
+**role:** Defines whether the user is a guest or host  
+
+### Relationships:
+A user can own multiple properties.  
+A user can make multiple bookings.  
+A user can write multiple reviews.  
+
+## Properties:
+
+### Key Fields:
+**id:** Unique property identifier  
+**owner:** Foreign key referencing the user who owns the property  
+**title:** Property name or listing title  
+**location:** Address or city where the property is located  
+**price_per_night:** Nightly rate for booking  
+
+### Relationships:
+A property belongs to one user (host).    
+A property can have multiple bookings.  
+
+
+## Bookings:
+
+### Key Fields:
+
+**id:** Unique booking identifier    
+**user:** Foreign key referencing the user who made the booking    
+**property:** Foreign key referencing the booked property     
+**check_in_date:** Start date of the booking    
+**check_out_date:** End date of the booking    
+
+### Relationships:
+
+A booking belongs to one user and one property.  
+A booking can be linked to a single payment.  
+
+
+## Reviews:
+
+### Key Fields:
+
+**id:** Unique review identifier  
+**user:** Foreign key referencing the reviewer  
+**property:** Foreign key referencing the reviewed property  
+**rating:** Numeric score (1–5)  
+**comment:**User feedback text  
+
+### Relationships:
+
+A review belongs to one user and one property.
+A property can have multiple reviews from different users.
+
+## Payments:
+
+### Key Fields:
+
+**id:** Unique payment identifier
+**booking:** Foreign key referencing the booking being paid for
+**amount:** Payment amount
+**status:** Payment state (e.g., pending, completed, failed)
+**transaction_date:** Date and time of payment
+
+### Relationships:
+A payment belongs to one booking.
+A booking has one corresponding payment record.
+
+
+## Entity Relationships Summary:
+User → Property: **One-to-Many**
+User → Booking: **One-to-Many**
+Property → Booking: **One-to-Many**
+Property → Review: **One-to-Many**
+Booking → Payment: **One-to-One**
