@@ -173,3 +173,14 @@ Continuous monitoring through CI/CD pipelines and DevOps tools helps detect anom
 
 ### Database & Caching Security:
 PostgreSQL and Redis are secured with restricted access, authentication, and indexing optimizations to prevent unauthorized data access and enhance performance.  
+
+
+## CI/CD Pipeline:
+
+CI/CD (Continuous Integration and Continuous Deployment) pipelines automate the process of testing, building, and deploying code, ensuring faster and more reliable software delivery. They help maintain code quality, reduce human error, and enable quick updates to production.  
+
+### Tools Used:
+
+**GitHub Actions:** Automates testing and deployment workflows directly from the repository.
+**Docker:** Ensures consistent environments across development, testing, and production.
+**CI/CD Pipelines:** Integrate version control, testing, and deployment for smooth, scalable releases.
