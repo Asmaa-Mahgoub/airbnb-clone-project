@@ -126,30 +126,50 @@ Booking → Payment: **One-to-One**
 
 
 ## Feature Breakdown:
-1. **User Management**
+1.**User Management**
 
 This feature allows users to register, log in, and manage their profiles securely. It includes authentication, authorization, and role management to distinguish between guests and hosts. User data is protected with hashed passwords and validated inputs to ensure privacy and integrity.  
 
-2. **Property Management**
+2.**Property Management**
 
 Hosts can create, update, and delete property listings, while users can browse and view detailed information about available properties. Each listing includes information such as title, location, price, and availability, forming the foundation of the booking process.  
 
-3. **Booking System**
+3.**Booking System**
 
 This module enables users to book properties for specific dates, manage reservations, and view booking details. It ensures accurate availability tracking, preventing overlapping bookings, and provides a seamless experience for both guests and hosts.  
 
-4. **Payment Processing**
+4.**Payment Processing**
 
 The payment system securely handles financial transactions related to bookings. It integrates with payment gateways to process payments, record transactions, and manage payment statuses, ensuring reliability and transparency for users.  
 
-5. **Review System**
+5.**Review System**
 
 After completing a stay, users can leave reviews and ratings for properties. This feedback system helps maintain quality, transparency, and trust between hosts and guests by showcasing property performance and user satisfaction.  
 
-6. **API Documentation**
+6.**API Documentation**
 
 All backend APIs are documented using the OpenAPI standard for clarity and ease of integration. The system supports both Django REST Framework for RESTful APIs and GraphQL for flexible, efficient queries, ensuring accessibility for developers and third-party integrations.  
 
-7. **Database Optimization**
+7.**Database Optimization**
 
 To maintain high performance, the backend implements indexing for frequently accessed data and caching mechanisms to reduce database load. These optimizations enhance response time, scalability, and user experience across all system modules.  
+
+## API Security:
+
+### Authentication & Authorization:
+Uses JWT-based authentication and role-based access control (RBAC) to protect endpoints such as /users/, /properties/, and /bookings/. Ensures that only authorized users can perform specific actions like property creation or booking management.  
+
+### Data Protection:
+Implements HTTPS encryption, hashed passwords, and input validation to prevent data breaches, injection attacks, and unauthorized access. Sensitive information—especially in /payments/—is encrypted during transmission and storage.  
+
+### Rate Limiting & Throttling:
+The API employs rate limiting to prevent excessive requests and brute-force attacks, ensuring fair and secure access for all users.  
+
+### Secure Payments:
+Payment processing via /payments/ uses trusted gateways with tokenized transactions. No raw financial data is stored, protecting users from fraud and payment misuse.  
+
+### Monitoring & Logging:
+Continuous monitoring through CI/CD pipelines and DevOps tools helps detect anomalies, while structured logging tracks authentication attempts, failed requests, and payment operations for auditing.  
+
+### Database & Caching Security:
+PostgreSQL and Redis are secured with restricted access, authentication, and indexing optimizations to prevent unauthorized data access and enhance performance.  
