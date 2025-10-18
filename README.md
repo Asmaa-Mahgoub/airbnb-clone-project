@@ -118,8 +118,38 @@ A booking has one corresponding payment record.
 
 
 ## Entity Relationships Summary:
-User → Property: **One-to-Many**
-User → Booking: **One-to-Many**
-Property → Booking: **One-to-Many**
-Property → Review: **One-to-Many**
-Booking → Payment: **One-to-One**
+User → Property: **One-to-Many**  
+User → Booking: **One-to-Many**  
+Property → Booking: **One-to-Many**  
+Property → Review: **One-to-Many**  
+Booking → Payment: **One-to-One**  
+
+
+## Feature Breakdown:
+1. **User Management**
+
+This feature allows users to register, log in, and manage their profiles securely. It includes authentication, authorization, and role management to distinguish between guests and hosts. User data is protected with hashed passwords and validated inputs to ensure privacy and integrity.  
+
+2. **Property Management**
+
+Hosts can create, update, and delete property listings, while users can browse and view detailed information about available properties. Each listing includes information such as title, location, price, and availability, forming the foundation of the booking process.  
+
+3. **Booking System**
+
+This module enables users to book properties for specific dates, manage reservations, and view booking details. It ensures accurate availability tracking, preventing overlapping bookings, and provides a seamless experience for both guests and hosts.  
+
+4. **Payment Processing**
+
+The payment system securely handles financial transactions related to bookings. It integrates with payment gateways to process payments, record transactions, and manage payment statuses, ensuring reliability and transparency for users.  
+
+5. **Review System**
+
+After completing a stay, users can leave reviews and ratings for properties. This feedback system helps maintain quality, transparency, and trust between hosts and guests by showcasing property performance and user satisfaction.  
+
+6. **API Documentation**
+
+All backend APIs are documented using the OpenAPI standard for clarity and ease of integration. The system supports both Django REST Framework for RESTful APIs and GraphQL for flexible, efficient queries, ensuring accessibility for developers and third-party integrations.  
+
+7. **Database Optimization**
+
+To maintain high performance, the backend implements indexing for frequently accessed data and caching mechanisms to reduce database load. These optimizations enhance response time, scalability, and user experience across all system modules.  
